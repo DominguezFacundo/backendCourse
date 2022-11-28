@@ -56,6 +56,6 @@ product.addProduct("Book Two", "The second Book", 11, "image", "code2", 6)
 product.addProduct("Book Three", "The third Book", 12, "image", "code3", 6)
 product.addProduct("Book Four", "The fourth Book", 13, "image", "code4", 6)
 
-product.getProductById(1)
+product.getProductById(3)
 
 console.log("After push", product.getProducts());
