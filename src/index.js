@@ -1,3 +1,4 @@
+//examples of class 7
 import express from 'express'
 
 const app = express()
