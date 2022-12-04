@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "title": "yes"
+  },
+  {
+    "id": 2,
+    "title": "yes"
+  },
+  {
+    "id": 3,
+    "title": "yes"
+  },
+  {
+    "id": 4,
+    "title": "yes"
+  },
+  {
+    "id": 5,
+    "title": "yes"
+  },
+  {
+    "id": 6,
+    "title": "yes"
+  },
+  {
+    "id": 7,
+    "title": "yes"
+  },
+  {
+    "id": 8,
+    "title": "yes"
+  },
+  {
+    "id": 9,
+    "title": "yes"
+  },
+  {
+    "id": 10,
+    "title": "yes"
+  },
+  {
+    "title": "Book One",
+    "description": "The first Book",
+    "price": 10,
+    "thumbnail": "image",
+    "stock": 6,
+    "code": "code1",
+    "id": 11
+  }
+]

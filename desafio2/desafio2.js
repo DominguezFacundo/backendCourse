@@ -46,9 +46,7 @@ class productManager {
           code,
         }
 
-
         products.push(newProduct);
-
 
         await fs.promises.writeFile(this.path, JSON.stringify(products, null, 2));
 
