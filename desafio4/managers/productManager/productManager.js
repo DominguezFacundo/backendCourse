@@ -47,7 +47,7 @@ export class ProductManagerFileSystem {
 
     const codeDuplicated = products.some(product => product.code === code)
     if (codeDuplicated) {
-      throw new Error("The code already exists")
+      throw new Error("The code is duplicated");
     }
 
     newProduct.id = !products.length ? 1 : products[products.length - 1].id + 1;
@@ -96,3 +96,9 @@ export class ProductManagerFileSystem {
   }
 
 }
+
+
+
+
+  
+

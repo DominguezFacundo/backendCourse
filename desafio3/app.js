@@ -1,11 +1,11 @@
 import express from 'express'
-import { productManager } from './managers/index.js'
+import { productManager } from '../desafio3/managers/index.js'
 
 const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
-const port = 8080
+const port = 8079
 
 app.get('/api/products', async (req, res) => {
     try {
@@ -62,5 +62,42 @@ app.post('/api/products', async (req, res) => {
     console.log(error);
    }
 })
+
+app.put('/api/products/:id', async (req, res) => {
+    try {   
+        const {id: paramId} = req.params
+        const id = Number(paramId)
+
+        if(id.isNaN || id < 0) {
+            return res.send({ success: false, error: "Id should be a valid number"})
+        } 
+
+        const {title, description, price, thumbnail, stock, code} = req.body;
+
+        const updatedProduct = await productManager.updateProduct(id, {title, description, price, thumbnail, stock, code})
+        res.send({success: true, updatedProduct: updatedProduct})
+
+    } catch (error) {
+        console.log(error);
+    }
+})
+
+app.delete('/api/products/:id', async (req, res) => {
+    try {
+        const {id: paramId} = req.params
+        const id = Number(paramId)
+
+        if(id.isNaN || id < 0) {
+            return res.send({ success: false, error: "Id should be a valid number"})
+        }
+
+        const deletedProduct = await productManager.deleteProduct(id)
+        res.send({success: true, deletedProduct: deletedProduct})
+
+    } catch (error) {
+        console.log(error);
+    }
+})
+
 
 app.listen(port, () => console.log(`Server running on port: ${port}`))
