@@ -1,0 +1,13 @@
+<div>
+    <h1>Desafio Websocket</h1>
+    <h2>Product list:</h2>
+    
+    <ul id="product-list">
+        {{#each products}}
+            <li>
+                <p>ID: {{this.id}}</p>
+                <p>Product: {{this.title}}</p>
+                <p>Price: ${{this.price}}</p>
+            </li>
+        {{/each}}
+</div>

@@ -6,7 +6,7 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
-const port = 8080
+const port = 7998
 
 app.use('/api/products', productsRouter)
 app.use('/api/carts', cartRouter)

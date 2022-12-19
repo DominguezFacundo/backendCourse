@@ -1,0 +1,36 @@
+<h1> Add or remove products! </h1>
+
+<ul id="rtp-product-list">
+  {{#each products}}
+    <li>
+      <p>ID: {{this.id}}</p>
+      <p>Product: {{this.title}}</p>
+      <p>Price: $ {{this.price}}</p>
+    </li>
+  {{/each}}
+</ul>
+
+{{! add form }}
+
+<div>
+  <form class="rtp-form" action="/realtimeproducts" method="post">
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title" />
+    <label for="price">Price</label>
+    <input type="number" name="price" id="price" />
+    <button type="submit">Add product</button>
+  </form>
+
+</div>
+{{! delete by id form }}
+
+<div>
+  <form class="rtp-form" action="/realtimeproducts" method="delete">
+    <label for="id">ID</label>
+    <input type="number" name="id" id="id" />
+    <button type="submit">Delete product</button>
+  </form>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/index.js"></script>
