@@ -1,4 +1,4 @@
-import expres from "express";
+import express from "express";
 import dotenv from "dotenv";
 import handlebars from "express-handlebars";
 import connectMongo from "./mongo.js";
@@ -16,7 +16,7 @@ import sessionRouter from "./routes/sessions.routes.js";
 
 //const and env variables
 dotenv.config();
-const app = expres();
+const app = express();
 const PORT = process.env.PORT || 5000;
 
 //init mongoDB
